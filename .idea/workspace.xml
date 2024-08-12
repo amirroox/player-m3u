@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e1b01e-894c-403f-a39d-070e812d63c1" name="Changes" comment="fix .gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723318762281</updated>
       <workItem from="1723318763589" duration="5415000" />
-      <workItem from="1723424761182" duration="872000" />
+      <workItem from="1723424761182" duration="1589000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -106,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723425575151</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix .gitignore">
+      <option name="closed" value="true" />
+      <created>1723425670532</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723425670532</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix .gitignore">
+      <option name="closed" value="true" />
+      <created>1723425699510</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723425699510</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
