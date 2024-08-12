@@ -15,20 +15,12 @@ new Vue({
           cover: "./img/1.jpg",
           source: "./mp3/1.mp3",
           url: "https://ro-ox.com",
-          favorited: false
-        },
-        {
-          name: "Shab Ahang",
-          artist: "Persian Radio",
-          cover: "./img/2.jpg",
-          source: "./mp3/navahang.m3u",
-          url: "https://ro-ox.com",
-          favorited: false
+          favorited: true
         },
         {
           name: "Rap Radio",
           artist: "Rap",
-          cover: "./img/3.jpg",
+          cover: "./img/2.jpg",
           source: "./mp3/German Rap.m3u",
           url: "https://ro-ox.com",
           favorited: false
@@ -36,16 +28,24 @@ new Vue({
         {
           name: "Power 95 Bermuda",
           artist: "Hip Hop",
-          cover: "./img/4.jpg",
+          cover: "./img/3.jpg",
           source: "./mp3/Power 95 Bermuda.m3u",
           url: "https://ro-ox.com",
           favorited: false
         },
         {
-          name: "Joy Radio",
-          artist: "Sia",
+          name: "Oldschool Gong",
+          artist: "Radio Gong Würzburg",
+          cover: "./img/4.jpg",
+          source: "./mp3/Oldschool.m3u",
+          url: "https://ro-ox.com",
+          favorited: false
+        },
+        {
+          name: "Rap Deluxe",
+          artist: "Germany Rap",
           cover: "./img/5.jpg",
-          source: "./mp3/Joy Radio.m3u",
+          source: "./mp3/Rap Deluxe.m3u",
           url: "https://ro-ox.com",
           favorited: false
         }
@@ -57,10 +57,15 @@ new Vue({
   },
   methods: {
     play() {
+      let iconPlay = document.getElementsByClassName("icon play_icon")[0]
       if (this.audio.paused) {
+        iconPlay.classList.add('playAnime')
+        iconPlay.classList.remove('pauseAnime')
         this.audio.play();
         this.isTimerPlaying = true;
       } else {
+        iconPlay.classList.remove('playAnime')
+        iconPlay.classList.add('pauseAnime')
         this.audio.pause();
         this.isTimerPlaying = false;
       }
@@ -87,6 +92,9 @@ new Vue({
       }
       this.duration = durmin + ":" + dursec;
       this.currentTime = curmin + ":" + cursec;
+      if (this.currentTrack.source.endsWith('.m3u')) {
+        this.duration = "LIVE";
+      }
     },
     updateBar(x) {
       let progress = this.$refs.progress;

@@ -2,8 +2,9 @@ body {
   background-size: cover;
   background: #121212 url("../img/dark1.png") no-repeat;
   font-family: "Bitter", serif;
-  height: 100vh;
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 * {
@@ -17,6 +18,39 @@ body {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+}
+
+// Model View
+.model{
+  position: absolute;
+  border-radius: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 20vw;
+  height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  //overflow-x: hidden;
+  margin-left: 2rem;
+  padding: 1rem;
+  gap: 4rem;
+  flex-wrap: nowrap;
+  background: rgba(26, 26, 26, 0.4);
+  box-shadow: 0 9px 14px -2px rgba(255, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  button {
+    cursor: pointer;
+    padding: 1.5rem;
+    //font-size: larger;
+    border-radius: 13%;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }
 
 .wrapper {
@@ -280,7 +314,7 @@ body {
 .progress__current {
   height: inherit;
   width: 0;
-  background-color: #a3b3ce;
+  background-color: #c87474;
   border-radius: 10px;
 }
 
@@ -317,43 +351,7 @@ body {
   }
 }
 
-.github-btn {
-  position: absolute;
-  right: 40px;
-  bottom: 50px;
-  text-decoration: none;
-  padding: 15px 25px;
-  border-radius: 4px;
-  box-shadow: 0 4px 30px -6px rgba(36, 52, 70, 0.65);
-  background: #24292e;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 16px;
-  transition: all .3s ease-in-out;
-
-  @media screen and (min-width: 500px) {
-    &:hover {
-      transform: scale(1.1);
-      box-shadow: 0 17px 20px -6px rgba(36, 52, 70, 0.36);
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin-top: 20px;
-
-    &:active {
-      transform: scale(1.1);
-      box-shadow: 0 17px 20px -6px rgba(36, 52, 70, 0.36);
-    }
-  }
-}
-
 //scale out
-
 .scale-out-enter-active {
   transition: all .35s ease-in-out;
 }
@@ -389,4 +387,57 @@ body {
   transform: scale(.55);
   pointer-events: none;
   opacity: 0;
+}
+
+// Custom Animation Play
+.playAnime {
+  animation: myAnim 5s linear 0s infinite normal forwards;
+}
+
+.pauseAnime {
+  animation: myAnim2 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    color: gold;
+  }
+
+  20% {
+    color: red;
+  }
+
+  40% {
+    color: green;
+  }
+
+  60% {
+    color: blue;
+  }
+
+  80% {
+    color: purple;
+  }
+
+  100% {
+    color: gold;
+  }
+}
+
+@keyframes myAnim2 {
+  0% {
+    color: #00ff00;
+  }
+
+  20% {
+    color: #00ff00;
+  }
+
+  40% {
+    color: #208b20;
+  }
+
+  100% {
+    color: white;
+  }
 }
